@@ -4,6 +4,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 
 object AIApi {
     //Parsea los Json a data class
@@ -15,7 +16,12 @@ object AIApi {
     }
 
     //Carga el Interceptor
-    private val client = OkHttpClient.Builder().addInterceptor(logginIntercerptor).build()
+    private val client = OkHttpClient.Builder()
+        .addInterceptor(logginIntercerptor)
+        .connectTimeout(30, TimeUnit.SECONDS) // Establece el tiempo de espera para la conexión
+        .readTimeout(30, TimeUnit.SECONDS) // Establece el tiempo de espera para la lectura de datos
+        .writeTimeout(30, TimeUnit.SECONDS) // Establece el tiempo de espera para escribir datos
+        .build()
 
     //Instancia de Retrofit
     private val retrofit = Retrofit.Builder()
