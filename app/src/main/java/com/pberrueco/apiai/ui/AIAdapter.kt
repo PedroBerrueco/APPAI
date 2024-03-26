@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.pberrueco.apiai.databinding.ItemBaseBinding
 
-class BaseRVAdapter(private val iaNames: Array<String>) : ListAdapter<String, BaseRVAdapter.BaseViewHolder>(BaseItemCallback) {
+class AIAdapter(private val iaNames: Array<String>) : ListAdapter<String, AIAdapter.BaseViewHolder>(BaseItemCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)

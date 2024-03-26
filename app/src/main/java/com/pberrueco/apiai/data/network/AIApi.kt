@@ -5,7 +5,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object BaseApi {
+object AIApi {
     //Parsea los Json a data class
     private val converter = GsonConverterFactory.create()
 

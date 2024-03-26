@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".ui.welcome.InitialActivity">
 
+    <EditText
+        android:id="@+id/et_question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/hint_question"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/btn_question"
+        app:layout_constraintEnd_toEndOf="@+id/et_question"
+        app:layout_constraintStart_toStartOf="@+id/et_question"
+        app:layout_constraintTop_toBottomOf="@+id/et_question" />
 </androidx.constraintlayout.widget.ConstraintLayout>
