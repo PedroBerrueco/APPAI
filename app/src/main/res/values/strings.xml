@@ -3,4 +3,5 @@
     <string name="ratingsbutton">Valoraciones IAs</string>
     <string name="hint_question">pregunta</string>
     <string name="btn_question">Enviar</string>
+    <string name="tv_req">AI Request Text</string>
 </resources>

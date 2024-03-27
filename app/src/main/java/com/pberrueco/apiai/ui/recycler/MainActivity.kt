@@ -2,6 +2,7 @@ package com.pberrueco.apiai.ui.recycler
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         binding.rvNuevabase.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding.rvNuevabase.adapter = adapter
 
+        binding.progressBar.visibility = View.VISIBLE
+
         viewModel.getQuestion(this)
         observeViewModel()
 
@@ -41,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         }
         viewModel.aiResponse.observe(this, Observer { response ->
             if (response != null) {
+                binding.progressBar.visibility = View.GONE
                 adapter.submitList(response)
             } else {
                 Toast.makeText(this, "Algo fue mal", Toast.LENGTH_SHORT).show()
