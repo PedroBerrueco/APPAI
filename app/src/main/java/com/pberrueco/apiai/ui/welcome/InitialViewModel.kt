@@ -8,9 +8,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class InitialViewModel : ViewModel() {
-    fun saveUserName(context: Context, username: String){
+    fun saveQuestion(context: Context, question: String){
         viewModelScope.launch(Dispatchers.IO){
-            DataStoreManager.saveData(context, username)
+            DataStoreManager.saveData(context, question)
         }
     }
 }

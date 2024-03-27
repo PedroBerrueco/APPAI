@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">APIAI</string>
-    <string name="ratingsbutton">Valoraciones IAs</string>
+    <string name="ratingsbutton">Valora las Respuestas</string>
     <string name="hint_question">pregunta</string>
     <string name="btn_question">Enviar</string>
+    <string name="tv_req">AI Request Text</string>
 </resources>

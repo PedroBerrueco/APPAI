@@ -29,7 +29,7 @@ class InitialActivity : AppCompatActivity() {
     private fun saveQuestion() {
         val user = binding.etQuestion.text.toString().trim()
         if(!user.isNullOrEmpty()){
-            ViewModel.saveUserName(this, user)
+            ViewModel.saveQuestion(this, user)
             goToRecycler()
         }else{
             Toast.makeText(this, "Escribe una pregunta", Toast.LENGTH_SHORT).show()

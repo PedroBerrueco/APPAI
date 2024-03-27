@@ -30,6 +30,12 @@ class MainViewModel : ViewModel() {
 
     }
 
+    fun deleteQuestion(context: Context, question: LiveData<String?>){
+        viewModelScope.launch(Dispatchers.IO){
+            DataStoreManager.deleteData(context)
+        }
+    }
+
     fun getResponse(question: String) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
