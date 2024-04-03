@@ -41,6 +41,16 @@ class ScoreViewModel : ViewModel() {
                 val response = aiService.updateScore(id, requestBody)
                 if (response.isSuccessful) {
                     // Manejar la respuesta exitosa si es necesario
+
+                    // Obtener los nuevos datos de puntuación después de la actualización
+                    val updatedScoresResponse = AIApi.service.getScores()
+
+                    if (updatedScoresResponse.isSuccessful) {
+                        val updatedScoreList = updatedScoresResponse.body()
+                        _aiResponse.postValue(updatedScoreList!!)
+                    } else {
+                        Log.d("ScoreViewModel", "Respuesta MALA al obtener los datos actualizados de puntuación")
+                    }
                 } else {
                     // Manejar la respuesta de error si es necesario
                 }
@@ -50,5 +60,6 @@ class ScoreViewModel : ViewModel() {
             }
         }
     }
+
 
 }

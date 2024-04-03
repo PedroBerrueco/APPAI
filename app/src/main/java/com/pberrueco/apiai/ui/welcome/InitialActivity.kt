@@ -8,6 +8,7 @@ import androidx.activity.viewModels
 import com.pberrueco.apiai.ui.recycler.MainActivity
 import com.pberrueco.apiai.databinding.ActivityInitialBinding
 
+//TODO Icono para la APP.
 class InitialActivity : AppCompatActivity() {
 
     private lateinit var _binding: ActivityInitialBinding

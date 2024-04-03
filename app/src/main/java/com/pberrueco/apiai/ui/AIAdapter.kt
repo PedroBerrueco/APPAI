@@ -36,7 +36,6 @@ class AIAdapter(private val iaNames: Array<String>) : ListAdapter<String, AIAdap
 
     inner class BaseViewHolder(val binding: ItemBaseBinding) : RecyclerView.ViewHolder(binding.root), View.OnClickListener {
         init {
-            // Configurar el clic oyente para todo el elemento de la lista
             binding.root.setOnClickListener(this)
         }
         override fun onClick(v: View?) {
